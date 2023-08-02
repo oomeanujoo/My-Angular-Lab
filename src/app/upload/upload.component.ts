@@ -18,7 +18,8 @@ export class UploadComponent implements OnInit {
   imageResponse: any;
   getImageData: any;
   GetImages() {
-    this.http.get('http://localhost:3000/images')
+    // this.http.get('http://localhost:3000/images')
+    this.http.get('https://json-server-czn1.onrender.com/images')
       .subscribe(res => {
         this.imageResponse = res
         this.getImageData = this.imageResponse
@@ -62,7 +63,8 @@ export class UploadComponent implements OnInit {
 
 
 
-    this.http.post('http://localhost:3000/images', UploadData)
+    // this.http.post('http://localhost:3000/images', UploadData)
+    this.http.post('https://json-server-czn1.onrender.com/images', UploadData)
       .subscribe(res => {
         this.ReRender()
         this.Reset()
@@ -74,7 +76,8 @@ export class UploadComponent implements OnInit {
   // ----------------Remove Functionality----------------
   DeletePhoto(CaptureID: any) {
     debugger;
-    let url = 'http://localhost:3000/images/'
+    // let url = 'http://localhost:3000/images/'
+    let url = 'https://json-server-czn1.onrender.com/images'
     let DeleteData = url + CaptureID
     debugger;
     this.http.delete(DeleteData)
