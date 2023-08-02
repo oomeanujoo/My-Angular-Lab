@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgxUiLoaderService } from "ngx-ui-loader";
 
 @Component({
   selector: 'app-upload',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class UploadComponent implements OnInit {
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private loader: NgxUiLoaderService) { }
   ngOnInit(): void {
     this.GetImages()
   }
@@ -19,10 +20,14 @@ export class UploadComponent implements OnInit {
   getImageData: any;
   GetImages() {
     // this.http.get('http://localhost:3000/images')
+    this.loader.start();
     this.http.get('https://json-server-czn1.onrender.com/images')
       .subscribe(res => {
         this.imageResponse = res
         this.getImageData = this.imageResponse
+        this.loader.stop();
+
+
       })
   }
 
@@ -62,12 +67,14 @@ export class UploadComponent implements OnInit {
     }
 
 
+    this.loader.start();
 
     // this.http.post('http://localhost:3000/images', UploadData)
     this.http.post('https://json-server-czn1.onrender.com/images', UploadData)
       .subscribe(res => {
         this.ReRender()
         this.Reset()
+
       })
   }
 
@@ -75,14 +82,14 @@ export class UploadComponent implements OnInit {
 
   // ----------------Remove Functionality----------------
   DeletePhoto(CaptureID: any) {
-    debugger;
     // let url = 'http://localhost:3000/images/'
     let url = 'https://json-server-czn1.onrender.com/images/'
     let DeleteData = url + CaptureID
-    debugger;
+    this.loader.start();
     this.http.delete(DeleteData)
       .subscribe(res => {
         this.ReRender();
+
       })
   }
   // ----------------Remove Functionality----------------
@@ -90,10 +97,13 @@ export class UploadComponent implements OnInit {
 
   ReRender() {
     this.GetImages()
+    this.loader.stop();
+
   }
 
   Reset() {
     this.imageUrl = null
+    this.loader.stop();
 
   }
 

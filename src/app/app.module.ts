@@ -8,6 +8,20 @@ import { ToolbarComponent } from './navbar/toolbar/toolbar.component';
 import { NavbarModule } from './navbar/navbar.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  NgxUiLoaderModule,
+  NgxUiLoaderConfig,
+  SPINNER,
+  POSITION,
+  PB_DIRECTION,
+} from 'ngx-ui-loader';
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  fgsColor: '#ffffff',
+  bgsSize: 40,
+  fgsType: SPINNER.chasingDots,
+  pbThickness: 5,
+};
 
 @NgModule({
   declarations: [
@@ -22,7 +36,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    BrowserAnimationsModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
