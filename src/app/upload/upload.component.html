@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="container-fluid px-1 py-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Upload Files</li>
+    </ol>
+  </div>
+  <div
+    class="container container-sm container-xs h-100 border d-flex justify-content-center p-lg-5 p-sm-5 p-xs-5"
+  >
+    <div class="col-8 py-5">
+      <label for="formFile" class="form-label">Upload image here</label>
+      <input
+        (change)="this.onFilechange($event)"
+        class="form-control"
+        type="file"
+        id="formFile"
+      />
+      <br />
+      <div class="row d-flex justify-content-center" *ngIf="imageUrl != null">
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <img [src]="imageUrl" class="img-thumbnail" />
+        </div>
+      </div>
+      <br />
+      <div class="d-flex justify-content-center">
+        <button (click)="onUpload()" type="button" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="container h-100 border p-5">
+    <div class="text-center" *ngIf="getImageData == ''">
+      No Images to Display
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let item of getImageData"
+        class="col-4 col-sm-12 col-md-6 col-xl-4 p-3"
+      >
+        <div class="card-header bg-dark">
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            aria-label="Close"
+            (click)="DeletePhoto(item.id)"
+          ></button>
+        </div>
+        <img class="img-thumbnail" [src]="item.image" />
+      </div>
+    </div>
+  </div>
+</div>
