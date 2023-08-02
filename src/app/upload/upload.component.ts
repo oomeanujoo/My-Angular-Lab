@@ -77,7 +77,7 @@ export class UploadComponent implements OnInit {
   DeletePhoto(CaptureID: any) {
     debugger;
     // let url = 'http://localhost:3000/images/'
-    let url = 'https://json-server-czn1.onrender.com/images'
+    let url = 'https://json-server-czn1.onrender.com/images/'
     let DeleteData = url + CaptureID
     debugger;
     this.http.delete(DeleteData)
