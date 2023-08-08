@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'stage-progress', loadChildren: () => import('../app/stage-progress/stage-progress.module').then(m => m.StageProgressModule)
 
+  },
+  {
+    path: 'material', loadChildren: () => import('./angular-material/angular-material.module').then(m => m.AngularMaterialModule)
+
   }
 ];
 

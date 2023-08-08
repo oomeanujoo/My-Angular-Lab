@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, from, map, of, throwError } from 'rxjs';
 import { Router } from '@angular/router';
-
-
 import {
   mergeMap,
   tap,
@@ -11,6 +9,8 @@ import {
   catchError,
   delay,
 } from 'rxjs/operators';
+
+
 declare var $: any, moment: any, _: any, window: any, Swal: any;
 @Injectable({
   providedIn: 'root'

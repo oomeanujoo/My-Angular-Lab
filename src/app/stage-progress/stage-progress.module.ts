@@ -17,7 +17,6 @@ import { AboutComponent } from '../navbar/about/about.component';
   imports: [
     CommonModule,
     StageProgressRoutingModule,
-    // NavbarModule
   ]
 })
 export class StageProgressModule { }

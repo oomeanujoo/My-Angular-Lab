@@ -15,8 +15,10 @@ import {
 } from 'ngx-ui-loader';
 import { StageProgressModule } from './stage-progress/stage-progress.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarModule } from './navbar/navbar.module';
 import { HomeComponent } from './navbar/home/home.component';
+
+
+
 
 
 
@@ -30,11 +32,13 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 };
 
 @NgModule({
+
   declarations: [
     AppComponent,
     UploadComponent,
     ToolbarComponent,
-    HomeComponent
+    HomeComponent,
+
   ],
   imports: [
     AppRoutingModule,
@@ -45,6 +49,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     StageProgressModule,
     BrowserAnimationsModule,
+
 
 
   ],
