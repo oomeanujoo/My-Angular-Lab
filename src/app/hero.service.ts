@@ -1,5 +1,5 @@
 import { Injectable, TemplateRef } from '@angular/core';
-import { from, map, of, throwError } from 'rxjs';
+import { BehaviorSubject, from, map, of, throwError } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -16,13 +16,27 @@ declare var $: any, moment: any, _: any, window: any, Swal: any;
   providedIn: 'root'
 })
 export class HeroService {
+  counter: boolean;
+  count: BehaviorSubject<boolean>;
 
-  constructor(private router: Router) { }
-  xmltojson(resp: any, tag: any){
+  constructor(private router: Router) {
     debugger;
-return $.cordys.json.findObjects(resp, tag);
+    this.count = new BehaviorSubject(this.counter);
+    debugger;
+
+
   }
-  ajax(method: any, namespace: any, parameters: any){
+  nextCount(count: boolean) {
+    this.count.next(count);
+    debugger;
+  }
+
+
+  xmltojson(resp: any, tag: any) {
+    debugger;
+    return $.cordys.json.findObjects(resp, tag);
+  }
+  ajax(method: any, namespace: any, parameters: any) {
     return new Promise((rev, rej) => {
       $.cordys.ajax({
         method: method,
@@ -101,37 +115,37 @@ return $.cordys.json.findObjects(resp, tag);
   stop() {
     $('.loader').last().remove();
   }
-  oa = (s:any) => (Array.isArray(s) ? s : [s]);
+  oa = (s: any) => (Array.isArray(s) ? s : [s]);
 
- getitem_local(key:any){
+  getitem_local(key: any) {
 
-  return  window.localStorage.getItem(key);
- }
- setitem_local(key:any, value:any){
-  window.localStorage.setItem(key, value)
- }
-  remove_local(key:any){
+    return window.localStorage.getItem(key);
+  }
+  setitem_local(key: any, value: any) {
+    window.localStorage.setItem(key, value)
+  }
+  remove_local(key: any) {
     window.localStorage.removeItem(key);
   }
 
-clear_local(){
-  window.localStorage.clear();
-}
-validateEmail(emailAdress: any) {
-  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (emailAdress.match(regexEmail)) {
-    return true;
-  } else {
-    return false;
+  clear_local() {
+    window.localStorage.clear();
   }
-}
-otoa(_:any) {
-  return Array.isArray(_) ? _ : [_];
-}
-
-
-
-
-
+  validateEmail(emailAdress: any) {
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (emailAdress.match(regexEmail)) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  otoa(_: any) {
+    return Array.isArray(_) ? _ : [_];
+  }
+
+
+
+
+
+}
 

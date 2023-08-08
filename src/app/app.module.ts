@@ -14,6 +14,14 @@ import {
   SPINNER,
 
 } from 'ngx-ui-loader';
+import { StageProgressModule } from './stage-progress/stage-progress.module';
+import { LayoutModule } from '@progress/kendo-angular-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
+
+
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   fgsColor: '#ffffff',
   bgsSize: 40,
@@ -31,11 +39,13 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    StageProgressModule,
+    LayoutModule,
+    BrowserAnimationsModule
 
 
 

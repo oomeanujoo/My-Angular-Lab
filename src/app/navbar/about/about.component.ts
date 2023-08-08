@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { HeroService } from 'src/app/hero.service';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  constructor(private appsevice: HeroService) { }
 
   ngOnInit(): void {
+
+  }
+
+  stageTwo(count: boolean) {
+    debugger;
+    this.appsevice.nextCount(count);
   }
 
 }
