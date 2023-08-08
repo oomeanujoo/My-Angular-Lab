@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UploadComponent } from './upload/upload.component';
 import { ToolbarComponent } from './navbar/toolbar/toolbar.component';
-import { NavbarModule } from './navbar/navbar.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {
@@ -15,8 +14,9 @@ import {
 
 } from 'ngx-ui-loader';
 import { StageProgressModule } from './stage-progress/stage-progress.module';
-import { LayoutModule } from '@progress/kendo-angular-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarModule } from './navbar/navbar.module';
+import { HomeComponent } from './navbar/home/home.component';
 
 
 
@@ -34,19 +34,17 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     AppComponent,
     UploadComponent,
     ToolbarComponent,
-
+    HomeComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     StageProgressModule,
-    LayoutModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
 
 
   ],

@@ -10,11 +10,11 @@ import { Subject } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public routerChanged1 = new Subject<boolean>()
-  routerChanged = true;
+  // public routerChanged1 = new Subject<boolean>()
+  // routerChanged = true;
   title = 'Angular Lab';
   constructor(private http: HttpClient) {
-    
+
 
   }
 }
