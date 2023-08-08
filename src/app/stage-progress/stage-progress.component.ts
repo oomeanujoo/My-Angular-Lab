@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from '../hero.service';
-import { bookIcon, eyeIcon, fileAddIcon, paperclipIcon, userIcon } from '@progress/kendo-svg-icons';
 
 @Component({
   selector: 'app-stage-progress',
