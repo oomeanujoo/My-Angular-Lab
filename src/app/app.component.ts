@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Type } from '@angular/core';
 import { HeroService } from './hero.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -12,20 +13,19 @@ import { HeroService } from './hero.service';
 export class AppComponent {
   routerOutletComponent: object;
   routerOutletComponentClass: string;
-  component: any
-
   onActivate(event: any): void {
     debugger;
     this.routerOutletComponent = event;
     this.routerOutletComponentClass = event.constructor.name;
     console.log("Activated: ", this.routerOutletComponentClass);
-    this.component = this.routerOutletComponentClass
-    this.appsevice.nextCount1(this.component);
-    debugger;
+    this.appsevice.nextCount1(this.routerOutletComponentClass);
+    debugger
+
 
   }
   title = 'Angular Lab';
-  constructor(private http: HttpClient, private appsevice: HeroService) {
+  constructor(private http: HttpClient, private appsevice: HeroService, private route: ActivatedRoute,
+    private router: Router) {
 
 
   }

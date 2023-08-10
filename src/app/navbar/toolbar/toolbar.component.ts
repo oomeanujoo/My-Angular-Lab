@@ -23,7 +23,7 @@ export class ToolbarComponent implements OnInit {
 
   }
   onClick() {
-    debugger;
+    debugger
     this.bookmarkRoot.callToggle.next(true);
   }
 
