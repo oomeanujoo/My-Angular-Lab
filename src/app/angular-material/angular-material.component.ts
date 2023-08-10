@@ -14,9 +14,9 @@ export class AngularMaterialComponent implements OnInit {
     this.routerOutletComponent = event;
     // this.routerOutletComponentClass = event.constructor.name;
     this.routerOutletComponentClass = this.constructor.name;
-    console.log('anuj here is the component name=>', this.constructor.name);
+    console.log('anuj here is the component name=>', this.routerOutletComponentClass);
 
-    console.log("Activated: ", this.routerOutletComponentClass);
+    // console.log("Activated: ", this.routerOutletComponentClass);
   }
 
 
