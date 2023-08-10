@@ -1,3 +1,15 @@
 <nav class="navbar navbar-light bg-primary">
-  <h5 [routerLink]="['/home']" class="text-white">Angular Lab</h5>
+  <div class="container-fluid">
+    <form class="d-flex align-items-center w-auto gap-2">
+      <i
+        type="button"
+        *ngIf="this.hell == 'AngularMaterialComponent'"
+        (click)="onClick()"
+        class="bx bx-menu text-white fs-2"
+      ></i>
+      <h5 [routerLink]="['/home']" class="text-white pt-1">Angular Lab</h5>
+    </form>
+  </div>
 </nav>
+
+<div>Loaded in router outlet: {{ this.hell }}</div>

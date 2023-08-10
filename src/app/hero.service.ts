@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, from, map, of, throwError } from 'rxjs';
+import { BehaviorSubject, Subject, from, map, of, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import {
   mergeMap,
@@ -17,17 +17,27 @@ declare var $: any, moment: any, _: any, window: any, Swal: any;
 })
 export class HeroService {
   counter: boolean;
+  datahere: any;
   count: BehaviorSubject<boolean>;
+  hell: BehaviorSubject<any>;
+  callToggle = new Subject();
+  callToggle1 = new Subject();
 
   constructor(private router: Router) {
     debugger;
     this.count = new BehaviorSubject(this.counter);
+    this.hell = new BehaviorSubject(this.datahere);
     debugger;
 
 
   }
   nextCount(count: boolean) {
     this.count.next(count);
+    debugger;
+  }
+  nextCount1(hell   : any) {
+    debugger;
+    this.hell.next(hell);
     debugger;
   }
 

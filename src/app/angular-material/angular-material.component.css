@@ -3,7 +3,7 @@
   width: 17rem;
   height: 100vh;
   position: fixed;
-  top: 10rem;
+  top: 52px;
   left: 0;
   transition: all 0.4s;
   overflow: hidden;
@@ -24,8 +24,25 @@
   margin: 0;
 }
 
-.body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}
+
+.bg-gradient-primary {
+  background-color: #4e73df;
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-size: cover;
 }

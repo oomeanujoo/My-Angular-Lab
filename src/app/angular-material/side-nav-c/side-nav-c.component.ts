@@ -7,10 +7,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 })
 export class SideNavCComponent implements OnInit {
-  showFiller = false;
-  sidenavWidth = 4;
-  ngStyle: string;
-  @Output() closeSideNav = new EventEmitter();
 
   constructor() {
 
@@ -18,16 +14,8 @@ export class SideNavCComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onToggleClose() {
-    this.closeSideNav.emit();
-  }
 
-  increase() {
-    this.sidenavWidth = 15;
-    console.log('increase sidenav width');
-  }
-  decrease() {
-    this.sidenavWidth = 4;
-    console.log('decrease sidenav width');
-}
+
+ 
+
 }

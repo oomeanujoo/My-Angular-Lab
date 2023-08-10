@@ -1,15 +1,27 @@
 import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { HeroService } from '../hero.service';
 @Component({
   selector: 'app-angular-material',
   templateUrl: './angular-material.component.html',
   styleUrls: ['./angular-material.component.css']
 })
 export class AngularMaterialComponent implements OnInit {
+  routerOutletComponent: object;
+  routerOutletComponentClass: string;
+
+  onActivate(event: any): void {
+    debugger;
+    this.routerOutletComponent = event;
+    this.routerOutletComponentClass = event.constructor.name;
+    console.log("Activated: ", this.routerOutletComponentClass);
+  }
 
 
+  constructor(public bookmarkRoot: HeroService) {
+    this.bookmarkRoot.callToggle.subscribe((data) => {
+      this.helloThere();
 
-  constructor() {
-
+    })
   }
 
   ngOnInit(): void {
@@ -18,10 +30,12 @@ export class AngularMaterialComponent implements OnInit {
   helloThere() {
     debugger;
 
+    console.log('function call here')
     const sidebar = document.getElementById('sidebar');
     const content = document.getElementById('content');
+    const sidebarCollapse = document.getElementById('sidebarCollapse');
 
-    if (sidebar && content) {
+    if (sidebarCollapse && sidebar && content) {
       sidebar.classList.toggle('active');
       content.classList.toggle('active');
 
