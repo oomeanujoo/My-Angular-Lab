@@ -12,13 +12,15 @@ import { HeroService } from './hero.service';
 export class AppComponent {
   routerOutletComponent: object;
   routerOutletComponentClass: string;
+  component: any
 
   onActivate(event: any): void {
     debugger;
     this.routerOutletComponent = event;
     this.routerOutletComponentClass = event.constructor.name;
     console.log("Activated: ", this.routerOutletComponentClass);
-    this.appsevice.nextCount1(this.routerOutletComponentClass);
+    this.component = this.routerOutletComponentClass
+    this.appsevice.nextCount1(this.component);
     debugger;
 
   }
