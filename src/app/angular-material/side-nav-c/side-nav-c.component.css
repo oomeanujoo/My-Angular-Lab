@@ -1,5 +1,5 @@
 .side-nav-content {
-  color: white;
+  color: #818699;
   width: 250px;
 }
 
@@ -20,7 +20,7 @@
   line-height: 25px;
   text-align: center;
   margin-left: 10px;
-  margin-right: 15px;
+  margin-right: 32px;
 }
 .nav-list-item {
   display: flex;
@@ -28,7 +28,7 @@
   height: 50px;
 }
 .nav-list-item:hover {
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: rgba(236, 236, 236, 0.3);
   border-radius: 10px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 a {
-  color: white;
+  color: #818699;
   text-decoration: none;
 }
 /* .sidebar-brand {

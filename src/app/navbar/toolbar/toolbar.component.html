@@ -1,29 +1,50 @@
-<!-- <nav class="navbar navbar-light bg-primary">
-  <div class="container-fluid">
-    <form class="d-flex align-items-center w-auto gap-2">
-      <i
-        type="button"
-        *ngIf="this.hell"
-        (click)="onClick()"
-        class="bx bx-menu text-white fs-2"
-      ></i>
-      <h5 [routerLink]="['/home']" class="text-white pt-1">Angular Lab</h5>
-    </form>
-  </div>
-</nav> -->
-
 <!-- <div>Loaded in router outlet: {{ this.hell }}</div> -->
 
-<nav class="navbar navbar-light bg-primary">
+<nav
+  class="navbar navbar-expand bg-primary"
+  [ngClass]="{
+    sterlite: hell == 'one'
+  }"
+>
   <div class="container-fluid">
-    <form class="d-flex align-items-center w-auto gap-2">
+    <div class="divLeft d-flex align-items-center">
       <i
+        [ngClass]="{
+          sterliteSideNav: hell == 'one'
+        }"
         type="button"
         *ngIf="this.hell == 'one'"
         (click)="toogle()"
         class="bx bx-menu text-white fs-2"
       ></i>
-      <h5 [routerLink]="['/home']" class="text-white pt-1">Angular Lab</h5>
-    </form>
+      <div *ngIf="this.hell != 'one'">
+        <h5 [routerLink]="['/home']" class="text-white pt-1">Angular Lab</h5>
+      </div>
+    </div>
+    <div *ngIf="this.hell == 'one'" class="divMiddle">
+      <div class="logo">
+        <img
+          src="../../../assets/images/20.68+x+9.53+cm+logo+_1_-removebg-preview.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div *ngIf="this.hell == 'one'" class="divRight">
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-light text-dark">
+          Sangamesh Kishore
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light text-dark dropdown-toggle dropdown-toggle-split"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        ></button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/home">Sign Out</a>
+        </div>
+      </div>
+    </div>
   </div>
 </nav>

@@ -6,9 +6,13 @@
       </div>
       <div class="sidebar-brand-text mx-2">Castle UI</div></a
     > -->
-    <li *ngFor="let item of navList" class="mx-3 nav-list-item">
+    <li
+      routerLink="{{ item.link }}"
+      *ngFor="let item of navList"
+      class="mx-3 nav-list-item"
+    >
       <i class="{{ item.icon }} fs-3"></i>
-      <a routerLink="{{ item.link }}">
+      <a>
         <span
           ><a>{{ item.name }}</a>
         </span>

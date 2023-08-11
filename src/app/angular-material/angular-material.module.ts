@@ -5,6 +5,7 @@ import { AngularMaterialComponent } from './angular-material.component';
 import { SideNavCComponent } from './side-nav-c/side-nav-c.component';
 import { TestCComponent } from './test-c/test-c.component';
 import { TestTwoComponent } from './test-two/test-two.component';
+import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
 
 
 
@@ -13,7 +14,8 @@ import { TestTwoComponent } from './test-two/test-two.component';
     AngularMaterialComponent,
     SideNavCComponent,
     TestCComponent,
-    TestTwoComponent
+    TestTwoComponent,
+    NavTabsComponent
   ],
   imports: [
     CommonModule,

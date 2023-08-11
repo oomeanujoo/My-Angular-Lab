@@ -1,3 +1,90 @@
 form .text-white {
   cursor: pointer;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 50%;
+}
+
+.sterlite {
+  background-color: white !important;
+  border-bottom: 1px solid #eee;
+}
+
+.sterliteSideNav {
+  color: #818699 !important;
+}
+
+.divLeft {
+  float: left;
+  width: 33.33%;
+}
+
+.divRight {
+  width: 33.33%;
+  display: flex;
+  justify-content: end;
+}
+
+.divMiddle {
+  margin: 0 auto;
+  width: 33.33%;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 100%;
+  }
+
+  .divLeft {
+    float: left;
+    width: 5%;
+    /* background-color: antiquewhite; */
+  }
+
+  .divRight {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    /* background-color: rgb(223, 131, 11); */
+  }
+
+  .divMiddle {
+    margin: 0 auto;
+    width: 55%;
+    /* background-color: rgb(10, 228, 58); */
+    display: flex;
+    justify-content: start;
+  }
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  /* left: calc(100% - 145.71px); */
+}
+
+.dropdown-menu a {
+  display: block;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}

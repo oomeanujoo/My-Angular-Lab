@@ -10,17 +10,17 @@ export class SideNavCComponent implements OnInit {
   navList = [
     {
       name: 'Dashboard',
-      icon: 'bx bxs-castle',
+      icon: 'bx bxs-dashboard',
       link: '/material/test'
     },
     {
-      name: 'Test 2',
-      icon: 'bx bxs-castle',
+      name: 'Report',
+      icon: 'bx bxs-report',
       link: '/material/test2'
     },
     {
-      name: 'Test 3',
-      icon: 'bx bxs-castle',
+      name: 'Database',
+      icon: 'bx bxs-data',
       link: ''
     }
   ];

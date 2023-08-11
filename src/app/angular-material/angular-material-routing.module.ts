@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularMaterialComponent } from './angular-material.component';
 import { TestCComponent } from './test-c/test-c.component';
 import { TestTwoComponent } from './test-two/test-two.component';
+import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'navTab',
+    component: NavTabsComponent,
+
+  }
 
 ];
 
