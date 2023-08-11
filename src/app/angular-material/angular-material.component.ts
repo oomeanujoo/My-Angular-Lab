@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { HeroService } from '../hero.service';
 @Component({
@@ -8,13 +9,16 @@ import { HeroService } from '../hero.service';
 export class AngularMaterialComponent implements OnInit {
   routerOutletComponent: object;
   routerOutletComponentClass: string;
+  sideNavStatus: any
+
 
   onActivate(event: any): void {
     debugger;
     this.routerOutletComponent = event;
     // this.routerOutletComponentClass = event.constructor.name;
-    this.routerOutletComponentClass = this.constructor.name;
-    console.log('anuj here is the component name=>', this.routerOutletComponentClass);
+    // this.routerOutletComponentClass = this.constructor.name;
+    // console.log('anuj here is the component name=>', this.routerOutletComponentClass);
+    // this.bookmarkRoot.nextCount1(this.routerOutletComponentClass);
 
     // console.log("Activated: ", this.routerOutletComponentClass);
   }
@@ -25,15 +29,27 @@ export class AngularMaterialComponent implements OnInit {
       this.helloThere();
 
 
+
+
+    })
+
+    this.bookmarkRoot.callToggle3.subscribe((e) => {
+      this.sideNavStatus = e
+      this.sideNavStatus = !this.sideNavStatus
     })
   }
 
   ngOnInit(): void {
+    debugger;
+    this.routerOutletComponentClass = this.constructor.name;
+    console.log('anuj here is the component name=>', this.routerOutletComponentClass);
+    var PassID = 'one'
+    debugger;
+    this.bookmarkRoot.nextCount1(PassID);
 
   }
   helloThere() {
     debugger;
-
     console.log('function call here')
     const sidebar = document.getElementById('sidebar');
     const content = document.getElementById('content');

@@ -20,8 +20,10 @@ export class HeroService {
   datahere: any;
   count: BehaviorSubject<boolean>;
   hell: BehaviorSubject<any>;
+  nav: BehaviorSubject<boolean>;
   callToggle = new Subject();
   callToggle1 = new Subject();
+  callToggle3 = new Subject();
 
   constructor(private router: Router) {
     debugger;
@@ -35,10 +37,14 @@ export class HeroService {
     this.count.next(count);
     debugger;
   }
-  nextCount1(hell   : any) {
+  nextCount1(hell: any) {
     debugger;
     this.hell.next(hell);
     debugger;
+  }
+  sideNav(nav: boolean) {
+    debugger;
+    this.nav.next(nav);
   }
 
 

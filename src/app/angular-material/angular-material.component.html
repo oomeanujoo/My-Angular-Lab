@@ -1,10 +1,19 @@
 <app-side-nav-c
-  class="vertical-nav navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+  [ngClass]="{
+    'app-side-nav-c-open': sideNavStatus == true
+  }"
+  class="vertical-nav navbar-nav bg-gradient-primary"
   id="sidebar"
 ></app-side-nav-c>
-<div class="page-content p-5" id="content">
-  <button id="sidebarCollapse" (click)="helloThere()" id="sidebarCollapse">
+<div
+  [ngClass]="{
+    'page-content-open': sideNavStatus == true
+  }"
+  class="page-content p-5"
+  id="content"
+>
+  <!-- <button id="sidebarCollapse" (click)="helloThere()" id="sidebarCollapse">
     Toggle
-  </button>
+  </button> -->
   <router-outlet></router-outlet>
 </div>

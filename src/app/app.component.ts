@@ -11,18 +11,28 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  hell: any = ''
   routerOutletComponent: object;
   routerOutletComponentClass: string;
   onActivate(event: any): void {
     debugger;
-    this.routerOutletComponent = event;
-    this.routerOutletComponentClass = event.constructor.name;
-    console.log("Activated: ", this.routerOutletComponentClass);
-    this.appsevice.nextCount1(this.routerOutletComponentClass);
+    // this.routerOutletComponent = event;
+    // this.routerOutletComponentClass = event.constructor.name;
+    // console.log("Activated: ", this.routerOutletComponentClass);
+    // this.appsevice.nextCount1(this.routerOutletComponentClass);
     debugger
+    this.hell = ''
+    this.appsevice.nextCount1(this.hell);
 
 
   }
+  ngOnInit(): void {
+    debugger;
+
+
+  }
+
+
   title = 'Angular Lab';
   constructor(private http: HttpClient, private appsevice: HeroService, private route: ActivatedRoute,
     private router: Router) {

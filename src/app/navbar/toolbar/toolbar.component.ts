@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AngularMaterialComponent } from 'src/app/angular-material/angular-material.component';
 import { HeroService } from 'src/app/hero.service';
 
@@ -9,6 +9,8 @@ import { HeroService } from 'src/app/hero.service';
 })
 export class ToolbarComponent implements OnInit {
   hell: any;
+  @Output() sideNavToggled = new EventEmitter<boolean>();
+  menuStatus: boolean = true;
 
   constructor(public bookmarkRoot: HeroService, private appsevice: HeroService) { }
 
@@ -25,6 +27,12 @@ export class ToolbarComponent implements OnInit {
   onClick() {
     debugger
     this.bookmarkRoot.callToggle.next(true);
+  }
+
+  toogle() {
+    this.menuStatus = !this.menuStatus
+    debugger;
+    this.bookmarkRoot.callToggle3.next(this.menuStatus);
   }
 
 
