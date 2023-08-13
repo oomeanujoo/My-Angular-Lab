@@ -11,7 +11,7 @@ export class SideNavCComponent implements OnInit {
     {
       name: 'Dashboard',
       icon: 'bx bxs-dashboard',
-      link: '/material/test'
+      link: '/material/test/navTab'
     },
     {
       name: 'Report',
@@ -21,7 +21,7 @@ export class SideNavCComponent implements OnInit {
     {
       name: 'Database',
       icon: 'bx bxs-data',
-      link: ''
+      link: '/home'
     }
   ];
 

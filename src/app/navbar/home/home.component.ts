@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   constructor(private hs: HeroService) {
     this.hell = ''
     this.hs.nextCount1(this.hell);
-    debugger;
   }
 
   ngOnInit(): void {

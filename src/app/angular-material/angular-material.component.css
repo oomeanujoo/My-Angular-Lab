@@ -11,6 +11,15 @@ app-side-nav-c {
   border-right: #eee 1px solid;
 }
 
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+  height: calc(100vh - 55px);
+  background: #fcfffe;
+  overflow-y: auto;
+}
+
 .app-side-nav-c-open {
   position: fixed;
   left: 0rem;
@@ -24,51 +33,13 @@ app-side-nav-c {
   border-right: #eee 1px solid;
 }
 
-/* .vertical-nav {
-  min-width: 17rem;
-  width: 17rem;
-  height: 100vh;
-  position: fixed;
-  top: 52px;
-  left: 0;
-  transition: all 0.4s;
-  overflow: hidden;
-} */
-
-.page-content {
-  width: calc(100% - 17rem);
-  margin-left: 17rem;
-  transition: all 0.4s;
-}
 .page-content-open {
   width: calc(100% - 90px);
   margin-left: 90px;
   transition: all 0.4s;
 }
 
-/* #sidebar.active {
-  margin-left: -17rem;
-} */
-
-#content.active {
-  width: 100%;
-  margin: 0;
-}
-
 @media (max-width: 768px) {
-  /* app-side-nav-c {
-    position: fixed;
-    left: 0rem;
-    min-width: 17rem;
-    width: 17rem;
-    height: 100vh;
-    overflow-x: hidden;
-    transition: all 0.4s;
-    white-space: nowrap;
-    background: white;
-    border-right: #eee 1px solid;
-  } */
-
   app-side-nav-c {
     position: fixed;
     left: 0rem;
@@ -88,7 +59,45 @@ app-side-nav-c {
     transition: all 0.4s;
   }
 }
+@media (min-width: 768px) {
+  app-side-nav-c {
+    position: fixed;
+    left: 0rem;
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: all 0.4s;
+    white-space: nowrap;
+    background: white;
+    border-right: #eee 1px solid;
+  }
 
+  .page-content {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+  }
+
+  .app-side-nav-c-open {
+    position: fixed;
+    left: 0rem;
+    min-width: 90px;
+    width: 90px;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: all 0.4s;
+    white-space: nowrap;
+    background: white;
+    border-right: #eee 1px solid;
+  }
+
+  .page-content-open {
+    width: calc(100% - 90px);
+    margin-left: 90px;
+    transition: all 0.4s;
+  }
+}
 
 .bg-gradient-primary {
   background-color: #4e73df;

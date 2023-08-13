@@ -88,3 +88,8 @@ img {
   position: relative;
   display: inline-block;
 }
+
+i:hover {
+  background-color: rgba(236, 236, 236, 0.3);
+  border-radius: 5px;
+}

@@ -1,5 +1,9 @@
- .row .col-2 img {
+.row .col-2 img {
   max-width: 100%;
+}
+
+.container-fluid {
+  margin-bottom: 1rem;
 }
 
 /* .row .col {

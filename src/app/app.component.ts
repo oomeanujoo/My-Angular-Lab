@@ -14,20 +14,22 @@ export class AppComponent {
   hell: any = ''
   routerOutletComponent: object;
   routerOutletComponentClass: string;
+  mobile: boolean;
   onActivate(event: any): void {
-    debugger;
+
+    if (window.screen.width <= 360) { // 768px portrait
+      this.mobile = true;
+    }
     // this.routerOutletComponent = event;
     // this.routerOutletComponentClass = event.constructor.name;
     // console.log("Activated: ", this.routerOutletComponentClass);
     // this.appsevice.nextCount1(this.routerOutletComponentClass);
-    debugger
     this.hell = ''
     this.appsevice.nextCount1(this.hell);
 
 
   }
   ngOnInit(): void {
-    debugger;
 
 
   }

@@ -6,6 +6,7 @@ import { SideNavCComponent } from './side-nav-c/side-nav-c.component';
 import { TestCComponent } from './test-c/test-c.component';
 import { TestTwoComponent } from './test-two/test-two.component';
 import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
+import { ChartsComponent } from './charts/charts.component';
 
 
 
@@ -15,7 +16,8 @@ import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
     SideNavCComponent,
     TestCComponent,
     TestTwoComponent,
-    NavTabsComponent
+    NavTabsComponent,
+    ChartsComponent
   ],
   imports: [
     CommonModule,

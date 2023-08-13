@@ -6,7 +6,7 @@
     sterlite: hell == 'one'
   }"
 >
-  <div class="container-fluid">
+  <div *ngIf="this.hell == 'one' || mobile == true" class="container-fluid">
     <div class="divLeft d-flex align-items-center">
       <i
         [ngClass]="{
@@ -17,9 +17,6 @@
         (click)="toogle()"
         class="bx bx-menu text-white fs-2"
       ></i>
-      <div *ngIf="this.hell != 'one'">
-        <h5 [routerLink]="['/home']" class="text-white pt-1">Angular Lab</h5>
-      </div>
     </div>
     <div *ngIf="this.hell == 'one'" class="divMiddle">
       <div class="logo">
@@ -32,7 +29,7 @@
     <div *ngIf="this.hell == 'one'" class="divRight">
       <div class="btn-group">
         <button type="button" class="btn btn-outline-light text-dark">
-          Sangamesh Kishore
+          Anuj Tomar
         </button>
         <button
           type="button"
@@ -46,5 +43,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="float-lg-start float-start" *ngIf="this.hell != 'one'">
+    <h5 [routerLink]="['/home']" class="text-white pt-1">Angular Lab</h5>
   </div>
 </nav>

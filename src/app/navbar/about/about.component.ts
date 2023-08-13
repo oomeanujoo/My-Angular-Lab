@@ -14,7 +14,6 @@ export class AboutComponent implements OnInit {
   }
 
   stageTwo(count: boolean) {
-    debugger;
     this.appsevice.nextCount(count);
   }
 

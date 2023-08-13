@@ -26,30 +26,23 @@ export class HeroService {
   callToggle3 = new Subject();
 
   constructor(private router: Router) {
-    debugger;
     this.count = new BehaviorSubject(this.counter);
     this.hell = new BehaviorSubject(this.datahere);
-    debugger;
 
 
   }
   nextCount(count: boolean) {
     this.count.next(count);
-    debugger;
   }
   nextCount1(hell: any) {
-    debugger;
     this.hell.next(hell);
-    debugger;
   }
   sideNav(nav: boolean) {
-    debugger;
     this.nav.next(nav);
   }
 
 
   xmltojson(resp: any, tag: any) {
-    debugger;
     return $.cordys.json.findObjects(resp, tag);
   }
   ajax(method: any, namespace: any, parameters: any) {
@@ -72,7 +65,6 @@ export class HeroService {
 
   ajaxcordys(method: any, namespace: any, parameters: any, flag = true) {
     const that = this;
-    debugger;
     return new Promise((rev, rej) => {
       if (flag === true) {
         that.start();
@@ -88,14 +80,12 @@ export class HeroService {
 
         success: function success(resp: any) {
           if (flag === true) {
-            debugger;
             that.stop();
           }
 
           rev(resp);
         },
         error: function error(e1: any, e2: any, e3: any) {
-          debugger;
           console.log('error=>', [e1, e2, e3]);
           if (flag === true) {
             that.stop();

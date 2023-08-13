@@ -10,10 +10,11 @@ export class AngularMaterialComponent implements OnInit {
   routerOutletComponent: object;
   routerOutletComponentClass: string;
   sideNavStatus: any
+  mobile: boolean;
 
 
   onActivate(event: any): void {
-    debugger;
+
     this.routerOutletComponent = event;
     // this.routerOutletComponentClass = event.constructor.name;
     // this.routerOutletComponentClass = this.constructor.name;
@@ -40,16 +41,16 @@ export class AngularMaterialComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger;
+
+
+
     this.routerOutletComponentClass = this.constructor.name;
     console.log('anuj here is the component name=>', this.routerOutletComponentClass);
     var PassID = 'one'
-    debugger;
     this.bookmarkRoot.nextCount1(PassID);
 
   }
   helloThere() {
-    debugger;
     console.log('function call here')
     const sidebar = document.getElementById('sidebar');
     const content = document.getElementById('content');

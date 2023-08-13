@@ -7,10 +7,16 @@
   height: 100%;
 } */
 
-body {
+.body {
+  overflow: auto;
+  height: 100%;
   margin: 0;
-
+  padding: 0;
 }
 
-/* html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+html,
+body {
+  /* margin: auto; */
+  height: 100%;
+  overflow: hidden;
+}

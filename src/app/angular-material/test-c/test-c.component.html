@@ -1,10 +1,37 @@
-<p>test-c works!  Members of the Narendra Modi government clashed with the Opposition in Parliament on Tuesday amid debate over a no-confidence motion. While the newly named INDIA coalition does not expect to successfully topple the administration, the move is intended to force discussion on the ongoing Manipur crisis. The discussion however devolved into name calling and allegations were hurled by both factions during the day.Congress MP Gogoi claims the state government, Home Department and the National Security Advisor had all failed to deal with the situation. “The third reason for the prime minister's silence is that he does not like to accept his mistakes. He will never accept publicly that his state government has failed. He prefers to remain silent than accept mistakes," he alleged.
-    Opposition leaders referenced veteran BJP leader and former prime minister Atal Bihari Vajpayee at various points during the debate and reminded the PM of 'rajdharma'.
-    Gogoi contended that it was a matter of grave concern that a government which talked about ‘one India’ had created ‘two Manipurs - one living in hills and the other in the valley’. “Through the no-confidence motion we want to break his vow of silence," he said.
-    The Congress MP also alluded to Gogoi Prime Minister Modi's 'secret talks' with Lok Sabha Speaker Om Birla in the latter's office and wondered if the details should be revealed. This in turn had prompted a furious response from Union Home Minister Amit Shah.
-    While Congress leader Rahul Gandhi was reinstated to the Lok Sabha he did not speak on Tuesday - prompting jibes from the ruling faction. He is expected to speak on Wednesday regarding the Manipur situation.
-    "This no-confidence motion has been brought. Why has this been brought? Sonia ji (Gandhi) is sitting here...I think she has to do two things - "Bete (son) ko set karna hai aur Damad (son-in-law) ko bhent karna hai" (She wants to set up his son [Rahul Gandhi] and wants to gift his son-in-law). ...That is the base of this motion," jibed BJP MP Nishikant Dubey while initiating the debate from his party’s side.
-    "This no-confidence motion has been brought at a wrong time and in a wrong manner. The Congress party will regret it later," Union minister Kiren Rijiju said in Lok Sabha. He also lashed out at the previous UPA government for “racial discrimination and atrocities" faced by the people from Northeast in the national capital.
-    The YSRCP, Shiv Sena, JDU, BJD, BSP, BRS, and LJP were allotted a total of two hours, divided according to the number of MPs from each party in the House. The debate concluded around 6 pm. Prime Minister Narendra Modi is expected to give a reply on August 10.
-    The BJP also lashed out at the INDIA coalition over a leading US daily's report of Chinese funding to a Delhi-based news portal. Leader of the House in Rajya Sabha Piyush Goyal asked "kya hai ye ajeeb rishta" (what is this peculiar relationship) and alleged that they are indulging in a conspiracy against India.
-    Following this, several leaders of the INDIA alliance moved a privilege notice against Rajya Sabha leader Piyush Goyal over his remarks.</p>
+<div class="container-fluid">
+  <div class="container-fluid">
+    <ul id="docs-nav-pills" class="nav nav-pills mb-4" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a
+          [ngClass]="{ active: isValue == 1 }"
+          (click)="toggle1()"
+          routerLink="/material/test/navTab"
+          class="nav-link px-5 font-weight-bold"
+          data-mdb-toggle="tab"
+          role="tab"
+          aria-selected="true"
+          >Overview</a
+        >
+      </li>
+
+      <li class="nav-item" role="presentation">
+        <a
+          routerLink="/material/test/charts"
+          [ngClass]="{ active: isValue == 2 }"
+          (click)="toggle2()"
+          id="docs-tab-gettingstarted"
+          class="nav-link px-5 font-weight-bold"
+          data-mdb-toggle="tab"
+          role="tab"
+          aria-selected="false"
+          tabindex="-1"
+          >API</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</div>

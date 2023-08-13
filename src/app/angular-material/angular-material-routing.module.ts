@@ -4,6 +4,7 @@ import { AngularMaterialComponent } from './angular-material.component';
 import { TestCComponent } from './test-c/test-c.component';
 import { TestTwoComponent } from './test-two/test-two.component';
 import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,15 @@ const routes: Routes = [
       {
         path: 'test',
         component: TestCComponent,
+        children: [{
+          path: 'navTab',
+          component: NavTabsComponent,
+        },
+        {
+          path: 'charts',
+          component: ChartsComponent,
+
+        }]
       },
       {
         path: 'test2',
@@ -22,11 +32,7 @@ const routes: Routes = [
       }
     ]
   },
-  {
-    path: 'navTab',
-    component: NavTabsComponent,
 
-  }
 
 ];
 

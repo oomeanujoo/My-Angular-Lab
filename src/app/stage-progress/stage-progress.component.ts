@@ -16,7 +16,6 @@ export class StageProgressComponent implements OnInit {
   ngOnInit(): void {
     this.appsevice.count.subscribe(c => {
       this.count = c;
-      debugger;
       this.stageO = false;
 
       this.hereisthefnc()
@@ -26,7 +25,6 @@ export class StageProgressComponent implements OnInit {
   names = [];
   addItem(newItem: boolean) {
     this.items.push(newItem);
-    debugger;
     this.hereisthefnc()
   }
 
@@ -42,12 +40,10 @@ export class StageProgressComponent implements OnInit {
     const div3 = document.querySelector('.step--3')
     var stageO = this.items[0]
     var stageT = this.count
-    debugger;
     if (stageO == true) {
       div1?.classList.remove('step-active')
       div2?.classList.add('step-active')
       this.stageO = false;
-      debugger;
     } else if (stageT == true) {
       div2?.classList.remove('step-active')
       div3?.classList.add('step-active')
