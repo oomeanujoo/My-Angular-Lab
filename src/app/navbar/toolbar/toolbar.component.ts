@@ -9,6 +9,7 @@ import { HeroService } from 'src/app/hero.service';
 })
 export class ToolbarComponent implements OnInit {
   hell: any;
+  hell2: any = false;
   @Output() sideNavToggled = new EventEmitter<boolean>();
   menuStatus: boolean = true;
   mobile: boolean;
@@ -24,14 +25,20 @@ export class ToolbarComponent implements OnInit {
 
     });
 
+
   }
-  onClick() {
-    this.bookmarkRoot.callToggle.next(true);
-  }
+  // onClick() {
+  //   this.bookmarkRoot.callToggle.next(true);
+  // }
 
   toogle() {
+
     this.menuStatus = !this.menuStatus
+    debugger;
+    console.log('nav=>', this.menuStatus);
+
     this.bookmarkRoot.callToggle3.next(this.menuStatus);
+
   }
 
 

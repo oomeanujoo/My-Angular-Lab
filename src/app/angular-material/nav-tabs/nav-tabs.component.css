@@ -1,0 +1,21 @@
+.container-fluid {
+  width: 100%;
+  height: 200px;
+  background-color: antiquewhite;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.row {
+  width: 100%;
+  height: calc(100% - 150px);
+  background-color: lightcyan;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+.row .col {
+  background-color: lightcoral;
+  width: 100%;
+  height: 100%;
+}

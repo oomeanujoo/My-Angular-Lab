@@ -6,17 +6,40 @@
       </div>
       <div class="sidebar-brand-text mx-2">Castle UI</div></a
     > -->
-    <li
-      routerLink="{{ item.link }}"
-      *ngFor="let item of navList"
-      class="mx-3 nav-list-item"
-    >
-      <i class="{{ item.icon }} fs-3"></i>
-      <a>
-        <span
-          ><a>{{ item.name }}</a>
-        </span>
-      </a>
-    </li>
+    <span>
+      <li
+        [ngClass]="{ active: isValue == 1 }"
+        (click)="toggle1()"
+        class="mx-3 nav-list-item"
+        routerLink="/material/test/navTab"
+      >
+        <i class="bx bxs-dashboard fs-2"></i>
+        <a>
+          <span><a>Dashboard</a> </span>
+        </a>
+      </li>
+      <li
+        [ngClass]="{ active: isValue == 2 }"
+        (click)="toggle2()"
+        class="mx-3 nav-list-item"
+        routerLink="/material/test2"
+      >
+        <i class="bx bxs-report fs-2"></i>
+        <a>
+          <span><a>Report</a> </span>
+        </a>
+      </li>
+      <li
+        [ngClass]="{ active: isValue == 3 }"
+        (click)="toggle3()"
+        class="mx-3 nav-list-item"
+        routerLink="/home"
+      >
+        <i class="bx bxs-data fs-2"></i>
+        <a>
+          <span><a>Database</a> </span>
+        </a>
+      </li>
+    </span>
   </ul>
 </div>

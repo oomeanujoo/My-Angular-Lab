@@ -41,3 +41,9 @@ a {
   color: #818699;
   text-decoration: none;
 }
+
+.nav-list-item.active {
+  background-color: #e3ebf7;
+  color: #3b71ca;
+  border-radius: 10px;
+}

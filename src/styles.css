@@ -1,3 +1,5 @@
+@import "https://fonts.cdnfonts.com/css/metropolis";
+
 .navbar {
   padding: 0.5rem 1rem;
 }
@@ -7,11 +9,16 @@
   height: 100%;
 } */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
 .body {
   overflow: auto;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 html,
@@ -19,4 +26,5 @@ body {
   /* margin: auto; */
   height: 100%;
   overflow: hidden;
+  width: 100%;
 }

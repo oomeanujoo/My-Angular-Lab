@@ -37,6 +37,7 @@ export class HeroService {
   nextCount1(hell: any) {
     this.hell.next(hell);
   }
+
   sideNav(nav: boolean) {
     this.nav.next(nav);
   }

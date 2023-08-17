@@ -9,8 +9,9 @@ import { HeroService } from '../hero.service';
 export class AngularMaterialComponent implements OnInit {
   routerOutletComponent: object;
   routerOutletComponentClass: string;
-  sideNavStatus: any
+  sideNavStatus: any = true;
   mobile: boolean;
+  BurgerFlag: boolean;
 
 
   onActivate(event: any): void {
@@ -26,17 +27,17 @@ export class AngularMaterialComponent implements OnInit {
 
 
   constructor(public bookmarkRoot: HeroService) {
-    this.bookmarkRoot.callToggle.subscribe((data) => {
-      this.helloThere();
+    // this.bookmarkRoot.callToggle.subscribe((data) => {
+    //   // this.helloThere();
 
 
 
 
-    })
+    // })
 
     this.bookmarkRoot.callToggle3.subscribe((e) => {
       this.sideNavStatus = e
-      this.sideNavStatus = !this.sideNavStatus
+      // this.sideNavStatus = !this.sideNavStatus
     })
   }
 
@@ -50,18 +51,35 @@ export class AngularMaterialComponent implements OnInit {
     this.bookmarkRoot.nextCount1(PassID);
 
   }
-  helloThere() {
-    console.log('function call here')
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    const sidebarCollapse = document.getElementById('sidebarCollapse');
+  // helloThere() {
+  //   console.log('function call here')
+  //   const sidebar = document.getElementById('sidebar');
+  //   const content = document.getElementById('content');
+  //   const sidebarCollapse = document.getElementById('sidebarCollapse');
 
-    if (sidebarCollapse && sidebar && content) {
-      sidebar.classList.toggle('active');
-      content.classList.toggle('active');
+  //   if (sidebarCollapse && sidebar && content) {
+  //     sidebar.classList.toggle('active');
+  //     content.classList.toggle('active');
 
-    }
+  //   }
+  // }
+
+  toggleSidebar() {
+    this.sideNavStatus = !this.sideNavStatus
+    console.log('nav=>', this.sideNavStatus);
+
+
   }
+
+  toggleOut() {
+    this.sideNavStatus = !this.sideNavStatus
+    console.log('nav=>', this.sideNavStatus);
+
+  }
+
+
+
+ 
 
 
 

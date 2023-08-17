@@ -9,15 +9,7 @@ app-side-nav-c {
   white-space: nowrap;
   background: white;
   border-right: #eee 1px solid;
-}
-
-.page-content {
-  width: calc(100% - 17rem);
-  margin-left: 17rem;
-  transition: all 0.4s;
-  height: calc(100vh - 55px);
-  background: #fcfffe;
-  overflow-y: auto;
+  top: calc(100%-56px);
 }
 
 .app-side-nav-c-open {
@@ -39,7 +31,7 @@ app-side-nav-c {
   transition: all 0.4s;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   app-side-nav-c {
     position: fixed;
     left: 0rem;
@@ -58,7 +50,26 @@ app-side-nav-c {
     margin-left: 90px;
     transition: all 0.4s;
   }
-}
+
+  .app-side-nav-c-open {
+    position: fixed;
+    left: 0rem;
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: all 0.4s;
+    white-space: nowrap;
+    background: white;
+    border-right: #eee 1px solid;
+  }
+
+  .page-content-open {
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+  }
+} */
 @media (min-width: 768px) {
   app-side-nav-c {
     position: fixed;

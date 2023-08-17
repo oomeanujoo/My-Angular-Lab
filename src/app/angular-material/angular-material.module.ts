@@ -7,6 +7,7 @@ import { TestCComponent } from './test-c/test-c.component';
 import { TestTwoComponent } from './test-two/test-two.component';
 import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
 import { ChartsComponent } from './charts/charts.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,6 +23,7 @@ import { ChartsComponent } from './charts/charts.component';
   imports: [
     CommonModule,
     AngularMaterialRoutingModule,
+    FormsModule
 
 
 

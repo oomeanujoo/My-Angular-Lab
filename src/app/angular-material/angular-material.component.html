@@ -1,10 +1,14 @@
 <app-side-nav-c
+  id="sidebar"
+  (mouseenter)="toggleSidebar()"
+  (mouseleave)="toggleOut()"
   [ngClass]="{
     'app-side-nav-c-open': sideNavStatus == true
   }"
   class="vertical-nav navbar-nav"
 ></app-side-nav-c>
 <div
+  id="pagecontent"
   [ngClass]="{
     'page-content-open': sideNavStatus == true
   }"
