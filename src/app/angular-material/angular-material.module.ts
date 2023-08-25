@@ -8,6 +8,7 @@ import { TestTwoComponent } from './test-two/test-two.component';
 import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
 import { ChartsComponent } from './charts/charts.component';
 import { FormsModule } from '@angular/forms';
+import { DbComponent } from './db/db.component';
 
 
 
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     TestCComponent,
     TestTwoComponent,
     NavTabsComponent,
-    ChartsComponent
+    ChartsComponent,
+    DbComponent
   ],
   imports: [
     CommonModule,

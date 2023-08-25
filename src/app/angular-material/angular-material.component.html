@@ -1,21 +1,33 @@
+<button
+  (click)="toggleSidebar()"
+  [ngClass]="{
+    'circle-open': sideNavStatus == true
+  }"
+  class="circle"
+  type="button"
+>
+  <i
+    [ngClass]="sideNavStatus == true ? 'bx-chevron-right' : 'bx-chevron-left'"
+    class="bx"
+  ></i>
+</button>
 <app-side-nav-c
   id="sidebar"
-  (mouseenter)="toggleSidebar()"
-  (mouseleave)="toggleOut()"
   [ngClass]="{
     'app-side-nav-c-open': sideNavStatus == true
   }"
   class="vertical-nav navbar-nav"
-></app-side-nav-c>
+>
+</app-side-nav-c>
+
 <div
-  id="pagecontent"
   [ngClass]="{
     'page-content-open': sideNavStatus == true
   }"
   class="page-content"
 >
-  <!-- <button id="sidebarCollapse" (click)="helloThere()" id="sidebarCollapse">
-    Toggle
-  </button> -->
   <router-outlet></router-outlet>
 </div>
+<!-- <button id="sidebarCollapse" (click)="helloThere()" id="sidebarCollapse">
+    Toggle
+  </button> -->

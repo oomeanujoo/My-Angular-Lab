@@ -5,6 +5,7 @@ import { TestCComponent } from './test-c/test-c.component';
 import { TestTwoComponent } from './test-two/test-two.component';
 import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
 import { ChartsComponent } from './charts/charts.component';
+import { DbComponent } from './db/db.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
       {
         path: 'test2',
         component: TestTwoComponent,
+
+      },
+      {
+        path: 'db',
+        component: DbComponent,
 
       }
     ]

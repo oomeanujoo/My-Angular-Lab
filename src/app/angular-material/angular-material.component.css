@@ -7,9 +7,44 @@ app-side-nav-c {
   overflow-x: hidden;
   transition: all 0.4s;
   white-space: nowrap;
-  background: white;
-  border-right: #eee 1px solid;
-  top: calc(100%-56px);
+  /* background-color: rgb(255, 255, 255, 0.3) !important; */
+  /* border-right: #eee 1px solid; */
+  /* top: calc(100% - 56px); */
+  /* background-image: url("../../assets/images/power-lines-6586702_1280.jpg") !important; */
+  /* background-blend-mode: screen; */
+  /* background-size: cover; */
+}
+
+app-side-nav-c::after {
+  content: "";
+  background-image: url("../../assets/images/New.jpg") !important;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: -40px;
+  opacity: 0.1;
+  pointer-events: none;
+  filter: blur(2px);
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.app-side-nav-c-open::after {
+  content: "";
+  background-image: url("../../assets/images/New.jpg") !important;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: -40px;
+  opacity: 0.1;
+  pointer-events: none;
+  filter: blur(1px);
+  transition: all 0.4s;
+  z-index: -1;
 }
 
 .app-side-nav-c-open {
@@ -21,14 +56,23 @@ app-side-nav-c {
   overflow-x: hidden;
   transition: all 0.4s;
   white-space: nowrap;
-  background: white;
-  border-right: #eee 1px solid;
+  /* border-right: #eee 1px solid; */
+}
+
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+  /* max-width: calc(100% - 17rem); */
+  margin-right: 0; /* Adjust margin-right for the closed state */
 }
 
 .page-content-open {
   width: calc(100% - 90px);
   margin-left: 90px;
+  margin-right: 0; /* Add margin-right for the open state */
   transition: all 0.4s;
+  /* max-width: calc(100% - 90px); */
 }
 
 /* @media (max-width: 768px) {
@@ -70,7 +114,8 @@ app-side-nav-c {
     transition: all 0.4s;
   }
 } */
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
   app-side-nav-c {
     position: fixed;
     left: 0rem;
@@ -85,8 +130,8 @@ app-side-nav-c {
   }
 
   .page-content {
-    width: calc(100% - 17rem);
-    margin-left: 17rem;
+    width: calc(100% - 90px);
+    margin-left: 90px;
     transition: all 0.4s;
   }
 
@@ -108,10 +153,51 @@ app-side-nav-c {
     margin-left: 90px;
     transition: all 0.4s;
   }
-}
+} */
 
 .bg-gradient-primary {
   background-color: #4e73df;
   background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
   background-size: cover;
+}
+
+.circle {
+  background: radial-gradient(
+    circle at top left,
+    rgba(27, 157, 197, 0.7),
+    /* Adjust opacity as needed */ rgba(27, 71, 197, 0.9) 70%
+      /* Adjust opacity as needed */
+  ) !important;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  left: 260px;
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  transition: all 0.4s;
+  border: 1px;
+}
+
+.circle-open {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: radial-gradient(
+    circle at top left,
+    rgba(27, 157, 197, 0.7),
+    /* Adjust opacity as needed */ rgba(27, 71, 197, 0.9) 70%
+      /* Adjust opacity as needed */
+  ) !important;
+  border-radius: 50%;
+  left: 78px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  transition: all 0.4s;
+  border: 1px;
+}
+
+.circle i {
+  color: white;
 }

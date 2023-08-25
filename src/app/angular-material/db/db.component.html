@@ -1,0 +1,123 @@
+<div class="container-fluid">
+  <div class="container-fluid mt-3 p-3">
+    <main>
+      <!-- <div>
+                  <img
+                    *ngIf="showSpinner"
+                    id="animation"
+                    src="../../../assets/js/iRrhKmHkKY.gif"
+                    width="50"
+                    height="50"
+                    alt="Loading Spinner"
+                  />
+                </div> -->
+
+      <!-- <button
+                  (click)="myFunction()"
+                  type="button"
+                  class="btn btn-primary"
+                  data-dismiss="modal"
+                >
+                  Show Animation
+                </button> -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Code</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of tableArrNew">
+          <tr>
+            <th>{{ item.type }}</th>
+            <td>{{ item.value }}</td>
+            <td>{{ item.entercode }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button
+        type="button"
+        class="btn btn-primary fix"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        Scan
+      </button>
+    </main>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{ scannedTotal }}
+
+        <input [(ngModel)]="entercode" />
+      </div>
+      <div class="radial-progress">
+        <svg height="200" width="200">
+          <circle class="background-circle" cx="100" cy="100" r="90"></circle>
+          <circle
+            class="progress-circle"
+            cx="100"
+            cy="100"
+            r="90"
+            [style.stroke-dashoffset]="calculateDashOffset()"
+          ></circle>
+        </svg>
+        <div *ngIf="showSpinner == false" class="progress-label">
+          {{ progress }}%
+        </div>
+      </div>
+
+      <div>
+        <img
+          *ngIf="showSpinner"
+          id="animation"
+          src="../../../assets/js/iRrhKmHkKY.gif"
+          width="50"
+          height="50"
+          alt="Loading Spinner"
+        />
+      </div>
+      <div class="form-group">
+        <label for="usr">Total</label>
+        <input [(ngModel)]="entercode" type="text" class="form-control" id="usr">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="processInputs(entercode)"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

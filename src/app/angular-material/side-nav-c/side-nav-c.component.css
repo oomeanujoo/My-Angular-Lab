@@ -26,9 +26,16 @@
   display: flex;
   align-items: center;
   height: 50px;
+  background-image: radial-gradient(
+    circle at top left,
+    rgba(27, 157, 197, 1),
+    rgba(27, 71, 197, 1) 40%
+  ) !important;
+  background-clip: text; /* Clip the gradient to the text */
+  color: transparent; /* Make the text transparent to reveal the gradient */
 }
+
 .nav-list-item:hover {
-  background-color: rgba(236, 236, 236, 0.3);
   border-radius: 10px;
 }
 
@@ -40,10 +47,30 @@
 a {
   color: #818699;
   text-decoration: none;
+  font-weight: 500 !important;
+  background-image: radial-gradient(
+    circle at top left,
+    rgba(27, 157, 197, 0.7),
+    rgba(27, 71, 197, 0.9) 70%
+  ) !important;
+  background-clip: text; /* Clip the gradient to the text */
+  color: transparent; /* Make the text transparent to reveal the gradient */
 }
 
 .nav-list-item.active {
-  background-color: #e3ebf7;
-  color: #3b71ca;
+  background: radial-gradient(
+    circle at top left,
+    rgba(27, 157, 197, 0.7),
+    /* Adjust opacity as needed */ rgba(27, 71, 197, 0.9) 70%
+      /* Adjust opacity as needed */
+  ) !important;
+  color: #ffffff;
   border-radius: 10px;
 }
+
+/* .sidebar-background {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/NIGU_Strain_tower.JPG/1200px-NIGU_Strain_tower.JPG") !important;
+  position: absolute;
+} */

@@ -48,7 +48,7 @@ export class SideNavCComponent implements OnInit {
 
   }
 
-  isValue: number = 0;
+  isValue: number = 1;
 
   toggle1() { this.isValue = 1; }
   toggle2() { this.isValue = 2; }

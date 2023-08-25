@@ -7,23 +7,37 @@ img {
   height: auto;
 }
 
-.logo {
+/* .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .logo img {
-  width: 50%;
+  width: 40%;
 }
 
 .sterlite {
-  background-color: white !important;
-  border-bottom: 1px solid #eee;
+  /* background-color: white !important; */
+  /* border-bottom: 1px solid #eee; */
+
+  background-color: #1b47c5 !important;
+  /* background: radial-gradient(
+    circle at top left,
+    rgb(27, 157, 197),
+    rgb(27, 71, 197) 40%
+  ); */
+  background-image: radial-gradient(
+      circle at top left,
+      #1b9dc5,
+      10%,
+      transparent 40%
+    ),
+    radial-gradient(circle at bottom right, #1b9dc5 -30%, transparent 50%);
 }
 
 .sterliteSideNav {
-  color: #818699 !important;
+  /* color: #818699 !important; */
 }
 
 .divLeft {
@@ -49,7 +63,7 @@ img {
 
   .divLeft {
     float: left;
-    width: 5%;
+    width: 20%;
     /* background-color: antiquewhite; */
   }
 
