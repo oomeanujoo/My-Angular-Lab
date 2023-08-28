@@ -62,13 +62,15 @@ img {
   }
 
   .divLeft {
-    float: left;
-    width: 20%;
     /* background-color: antiquewhite; */
+    float: left;
+    /* width: 100%; */
+    position: absolute;
+    width: 140px;
   }
 
   .divRight {
-    width: 40%;
+    width: 100%;
     display: flex;
     justify-content: end;
     /* background-color: rgb(223, 131, 11); */

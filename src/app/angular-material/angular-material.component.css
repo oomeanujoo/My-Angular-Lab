@@ -201,3 +201,15 @@ app-side-nav-c::after {
 .circle i {
   color: white;
 }
+
+.area {
+  height: 180px;
+  transition: 0.5s;
+  position: absolute;
+  background: #1f60c4;
+  margin: 0;
+  border-radius: 0;
+  padding: 30px;
+  width: 100%;
+  z-index: -1;
+}

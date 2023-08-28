@@ -26,11 +26,11 @@ export class AppComponent {
     // this.appsevice.nextCount1(this.routerOutletComponentClass);
     this.hell = ''
     this.appsevice.nextCount1(this.hell);
-
+debugger
 
   }
   ngOnInit(): void {
-
+debugger
 
   }
 
