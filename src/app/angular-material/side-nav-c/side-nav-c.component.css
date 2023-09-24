@@ -36,7 +36,17 @@
 }
 
 .nav-list-item:hover {
+  cursor: pointer;
   border-radius: 10px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(27, 157, 197, 0.1),
+    /* Adjust opacity as needed */ rgba(27, 71, 197, 0.1) 70%
+      /* Adjust opacity as needed */
+  ) !important;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-list-item span {
@@ -66,6 +76,14 @@ a {
   ) !important;
   color: #ffffff;
   border-radius: 10px;
+}
+
+/* .nav-list-item:active i.bx {
+  color: #ffffff;
+} */
+
+.nav-list-item:not(.active):hover i.bx {
+  color: rgb(67, 110, 226);
 }
 
 /* .sidebar-background {

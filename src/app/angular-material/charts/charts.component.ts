@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { catchError, from } from 'rxjs';
 import { Chart, registerables } from 'chart.js';
-import { NgxUiLoaderService } from 'ngx-ui-loader';
+  import { NgxUiLoaderService } from 'ngx-ui-loader';
 Chart.register(...registerables);
 
 @Component({
@@ -24,7 +24,6 @@ export class ChartsComponent implements OnInit {
     //     this.year.push(this.data.data[index].Year);
 
     //   }
-    //   debugger;
     // })
     this.apiCall()
 
@@ -35,7 +34,6 @@ export class ChartsComponent implements OnInit {
   chartishere(type: any, id: any) {
     console.log(this.population)
     console.log(this.year)
-    debugger;
     var myChart = new Chart(id, {
       type: type,
       data: {
@@ -73,7 +71,6 @@ export class ChartsComponent implements OnInit {
   }
 
   // apiCall() {
-  //   debugger;
   //   const url = 'https://datausa.io/api/data?drilldowns=Nation&measures=Population';
   //   const options = {
   //     method: 'GET',

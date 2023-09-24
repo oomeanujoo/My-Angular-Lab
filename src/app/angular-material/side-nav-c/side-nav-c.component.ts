@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { container } from 'webpack';
 declare var $: any
 @Component({
   selector: 'app-side-nav-c',

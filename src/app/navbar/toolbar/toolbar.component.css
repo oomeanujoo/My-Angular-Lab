@@ -1,32 +1,9 @@
-form .text-white {
-  cursor: pointer;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-/* .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 .logo img {
   width: 40%;
 }
 
 .sterlite {
-  /* background-color: white !important; */
-  /* border-bottom: 1px solid #eee; */
-
   background-color: #1b47c5 !important;
-  /* background: radial-gradient(
-    circle at top left,
-    rgb(27, 157, 197),
-    rgb(27, 71, 197) 40%
-  ); */
   background-image: radial-gradient(
       circle at top left,
       #1b9dc5,
@@ -34,10 +11,6 @@ img {
       transparent 100%
     ),
     radial-gradient(circle at bottom right, #1b9dc5 -90%, transparent 100%);
-}
-
-.sterliteSideNav {
-  /* color: #818699 !important; */
 }
 
 .divLeft {
@@ -51,9 +24,9 @@ img {
   justify-content: end;
 }
 
-.divMiddle {
-  margin: 0 auto;
-  width: 33.33%;
+.btn-group .btn:hover {
+  background-color: #235cff;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -62,9 +35,7 @@ img {
   }
 
   .divLeft {
-    /* background-color: antiquewhite; */
     float: left;
-    /* width: 100%; */
     position: absolute;
     width: 140px;
   }
@@ -73,51 +44,12 @@ img {
     width: 100%;
     display: flex;
     justify-content: end;
-    /* background-color: rgb(223, 131, 11); */
   }
 
   .divMiddle {
     margin: 0 auto;
     width: 55%;
-    /* background-color: rgb(10, 228, 58); */
     display: flex;
     justify-content: start;
   }
-}
-
-.dropdown-container {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  width: 100%;
-  top: 110%;
-  /* left: calc(100% - 145.71px); */
-}
-
-.dropdown-menu a {
-  display: block;
-}
-
-.dropdown-container {
-  position: relative;
-  display: inline-block;
-}
-
-i:hover {
-  background-color: rgba(236, 236, 236, 0.3);
-  border-radius: 5px;
-}
-
-.rounded-circle {
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.btn-group .btn:hover {
-  background-color: #235cff; /* Change to your desired hover background color */
-  color: #ffffff; /* Change to your desired hover text color */
 }

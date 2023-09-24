@@ -39,10 +39,9 @@ export class DbComponent implements OnInit {
       .subscribe(res => {
         this.data = res
         this.tableArr = this.data.result.codes
-        this.tableArrNew = Object.keys(this.tableArr).map(key => ({ type: key, value: this.tableArr[key] }));
+        this.tableArrNew = Object.keys(this.tableArr).map(key => ({ type: key, value: this.tableArr[key] })); //Convert String to Array
 
         this.loader.stop();
-        debugger;
         this.calculateAdjustedLength()
 
       })
@@ -50,7 +49,6 @@ export class DbComponent implements OnInit {
 
 
   processInputs(entercode: any) {
-    debugger;
     // this.showGifForThreeSeconds()
 
 
@@ -61,7 +59,6 @@ export class DbComponent implements OnInit {
 
   flag: any = 0
   scanMultiple(entercodes: string[]) {
-    debugger;
     this.showSpinner = true;
     setTimeout(() => {
       this.showSpinner = false;
@@ -102,7 +99,6 @@ export class DbComponent implements OnInit {
         const adjustedLength = this.tableArrNew.length - this.scannedTotal;
         console.log('Adjusted Length:', adjustedLength);
         this.scannedTotal = adjustedLength
-        debugger;
       }
 
 
@@ -141,7 +137,6 @@ export class DbComponent implements OnInit {
 
   // showGifForThreeSeconds() {
   //   // Show the GIF
-  //   debugger;
   //   const animationImg = document.getElementById("animation");
   //   if (animationImg) {
   //     animationImg.style.display = "block"

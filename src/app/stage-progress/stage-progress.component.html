@@ -1,41 +1,22 @@
-<div class="container-fluid">
-  <div class="container d-flex justify-content-center">
-    <div class="row">
-      <div class="stepper">
-        <div class="step--1 step-active">Step 1</div>
-        <div class="step--2">Step 2</div>
-        <div class="step--3">Step 3</div>
+<div class="container w-100 border my-3">
+  <div class="container py-3">
+    <div class="card">
+      <div class="card-header fw-bold">Table</div>
+
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">College Names</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of this.tableD[0].value; let i = index">
+            <tr>
+              <td>{{ item.name }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-
-  <div class="container-fluid">
-    <h4>Progress Data will be displayed here</h4>
-  </div>
-  <div class="container-fluid py-2">
-    <div class="row">
-      <div>Stage 1 Status : {{ items[0] }}</div>
-    </div>
-  </div>
-  <div class="container-fluid py-2">
-    <div class="row">
-      <app-stage-one (newItemEvent)="addItem($event)"></app-stage-one>
-    </div>
-  </div>
-  <div class="container-fluid py-2">
-    <div class="row">
-      <app-about></app-about>
-    </div>
-  </div>
-
-  <h1>Count in App Component = {{ count }}</h1>
 </div>
-
-
-
-
-
-
-
-
-

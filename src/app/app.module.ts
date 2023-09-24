@@ -19,11 +19,6 @@ import { HomeComponent } from './navbar/home/home.component';
 
 
 
-
-
-
-
-
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   fgsColor: '#ffffff',
   bgsSize: 40,

@@ -38,14 +38,12 @@ export class AngularMaterialComponent implements OnInit {
     this.bookmarkRoot.callToggle3.subscribe((e) => {
       this.sideNavStatus = e
       // this.sideNavStatus = !this.sideNavStatus
-      debugger;
 
     })
   }
 
   ngOnInit(): void {
 
-    debugger;
 
     this.routerOutletComponentClass = this.constructor.name;
     console.log('anuj here is the component name=>', this.routerOutletComponentClass);

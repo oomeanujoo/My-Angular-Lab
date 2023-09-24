@@ -34,7 +34,6 @@ export class ToolbarComponent implements OnInit {
   toogle() {
 
     this.menuStatus = !this.menuStatus
-    debugger;
     console.log('nav=>', this.menuStatus);
 
     this.bookmarkRoot.callToggle3.next(this.menuStatus);
