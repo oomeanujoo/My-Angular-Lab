@@ -14,7 +14,7 @@ https://angular-lab.netlify.app/home
 ### Theme 2
 
 ![1](./src/assets/images/Screen1.jpg)
-![2](./src/assets/images/Screen2.jpg)
+![2](./src/assets/images/Screen2.png)
 ### Theme 3
 
 ![1](./src/assets/images/Sc1.jpg)
