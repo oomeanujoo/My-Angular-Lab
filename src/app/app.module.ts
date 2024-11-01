@@ -16,6 +16,7 @@ import {
 import { StageProgressModule } from './stage-progress/stage-progress.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './navbar/home/home.component';
+import { MongoAPIComponent } from './mongo-api/mongo-api.component';
 
 
 
@@ -33,6 +34,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     UploadComponent,
     ToolbarComponent,
     HomeComponent,
+    MongoAPIComponent,
 
   ],
   imports: [
